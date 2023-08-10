@@ -1,12 +1,13 @@
 import { Button, StyleSheet, Text, View } from "react-native";
 import { useTailwind } from "tailwind-rn";
+import StackNavigator from "./StackNavigator";
+import { NavigationContainer } from "@react-navigation/native";
 
 export default function App() {
   const tw = useTailwind();
   return (
-    <View style={tw("flex-1 justify-center items-center")}>
-      <Text>Tinder App</Text>
-      <Button title='Click me' />
-    </View>
+    <NavigationContainer>
+      <StackNavigator />
+    </NavigationContainer>
   );
 }
